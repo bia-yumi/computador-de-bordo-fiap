@@ -17,8 +17,8 @@
     --border-radius-2:   0.8rem;
     --border-radius-3:   1.2rem;
 
-    --card-padding: 1.8rem;
-    --padding-1:    1.2rem;
+    --card-padding: 4rem;
+    --padding-1:    1rem;
     
     --box-shadow: 0 2rem 3rem var(--color-light)
 }
@@ -35,7 +35,7 @@
 }
 
 html{
-    font-size: 14px;
+    font-size: 15px;
 }
 
 body{
@@ -137,11 +137,8 @@ aside .top{
 aside .logo {
     display: flex;
     gap: 0.8rem;
-}
-
-aside .logo img {
-    width:  2rem;
-    height: 2rem;
+    text-align: center;
+    align-items: center;
 }
 
 aside .close {
@@ -208,5 +205,26 @@ aside .sidebar a:hover {
 aside .sidebar a:hover span {
     margin-left: 1rem;
 
+}
+
+main {
+    margin-top: 1.4rem;
+}
+
+h1.titulo-smart {
+    text-align: center;
+}
+
+main .insights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+}
+
+main .insights > div {
+    background: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 2rem;
 }
 
