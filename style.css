@@ -1,0 +1,496 @@
+:root {
+    --color-primary:         rgb(98, 181, 250);
+    --color-danger:          #ff7782;
+    --color-success:         #41f1b6;
+    --color-warning:         #ffbb55;
+    --color-white:           #fff;
+    --color-info-dark:       #7d8da1;
+    --color-info-light:      #dce1eb;
+    --color-dark:            #363949;
+    --color-light:           rgba(132, 139, 200, 0.18);
+    --color-primary-variant: #111e88;
+    --color-dark-variant:    #677483;
+    --color-background:      #f6f6f9;
+
+    --card-border-radius: 2rem;
+    --border-radius-1:   0.4rem;
+    --border-radius-2:   0.8rem;
+    --border-radius-3:   1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1:    1rem;
+    
+    --box-shadow: 0 2rem 2rem var(--color-light)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 15px;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: poppins, sans-serif;
+    font-size: 0.88rem;
+    background: var(--color-background);
+    user-select: none;
+    overflow: hidden;
+    color: var(--color-dark);
+}
+
+.container {
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 23rem;
+}
+
+a{
+    color: var(--color-dark);
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+h1{
+    font-weight: 500;
+    font-size: 1.8rem;
+}
+
+h2{
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+h3{
+    font-size: 0.87rem;
+    font-weight: 500;
+}
+
+h4{
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+h5{
+    font-size: 0.77rem;
+}
+
+small{
+    font-size: 0.75rem;
+}
+
+.profile-photo{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+p{
+    color: var(--color-dark-variant)
+}
+
+b{
+    color: var(--color-dark)
+}
+
+.primary{
+    color: var(--color-primary)
+}
+
+.danger{
+    color: var(--color-danger)
+}
+
+.success{
+    color: var(--color-success)
+}
+
+.warning{
+    color: var(--color-warning)
+}
+
+aside {
+    height: 100vh;
+}
+
+aside .top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+}
+
+aside .logo {
+    display: flex;
+    text-align: center;
+}
+
+aside .close {
+    display: none;
+}
+
+aside .sidebar {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    position: relative;
+    top: 3rem;
+    border-radius: 2rem;
+}
+
+aside h3 {
+    font-weight: 500;
+}
+
+aside .sidebar a {
+    display: flex;
+    color: var(--color-info-dark);
+    margin: 2rem;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.7rem;
+    transition: all 300ms ease;
+}
+
+aside .sidebar a span {
+    font-size: 1.6rem;
+    transition: all 300ms ease;
+}
+
+aside .sidebar a:last-child {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+}
+
+aside .sidebar a.active {
+    background: var(--color-light);
+    color: var(--color-primary);
+    margin-left: 0;
+}
+
+aside .sidebar a.active:before {
+    content: "";
+    width: 6px;
+    height: 100%;
+    background: var(--color-primary);
+}
+
+aside .sidebar a.active span {
+    color: var(--color-primary);
+    margin-left: calc(1rem - 3px);
+}
+
+aside .sidebar a:hover {
+    color: var(--color-primary);
+}
+
+aside .sidebar a:hover span {
+    margin-left: 1rem;
+
+}
+
+main {
+    margin-top: 1.4rem;
+}
+
+h1.titulo1 {
+    text-align: center;
+}
+
+/* -----------------MAIN-------------------------------*/ 
+
+main {
+    font-weight: 300;
+}
+
+main .insights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.0rem;
+}
+
+main .insights > div {
+    background: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+
+main .insights > div:hover {
+    box-shadow: none;
+}
+
+main .insights > div span {
+    background: rgb(170, 215, 252);
+    padding: 0.4rem;
+    border-radius: 50%;
+    color: var(--color-white);
+    font-size: 1.5rem;
+}
+
+main .insights > div .middle {
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .insights h3 {
+    margin: 0.2rem 0 0.5;
+}
+/* --------------------END MAIN----------------------------*/ 
+
+/*                    RIGHT ROTINA                   */
+
+.right .top {
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+    margin-top: 1.6rem;
+    margin-right: 1rem;
+}
+
+.right .top button {
+    display: none;
+}
+
+.right .theme-toggler {
+    background: var(--color-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.6rem;
+    width: 4.2rem;
+    cursor: pointer;
+    border-radius: var(--border-radius-1)
+}
+
+.right .theme-toggler span {
+    font-size: 1.2rem;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right .theme-toggler span.active {
+    background: var(--color-primary);
+    color: white;
+    border-radius: var(--border-radius-1);
+}
+
+.right .top .profile {
+    display: flex;
+    gap: 2rem;
+    text-align: right;
+}
+
+
+.right .rotina h2 {
+    margin-bottom: 1rem;
+    margin-left: 0.8rem;
+}
+
+.rotina .rotinas {
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    gap: 0.8rem;
+}
+
+.rotina .rotinas > div {
+    background: var(--color-white);
+    padding: 4rem;
+    border-radius: var(--card-border-radius);
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+    cursor: pointer;;
+}
+
+.rotina .rotinas > div:hover {
+    box-shadow: none;
+}
+
+.rotina .rotinas > div span {
+    background: rgb(170, 215, 252);
+    padding: 0.4rem;
+    border-radius: 50%;
+    color: var(--color-white);
+    font-size: 1.5rem;
+}
+
+.rotina .rotinas > div .middle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0.2rem 0 0.5;
+}
+
+.right .add-rotina {
+    margin-top: 1rem;
+}
+
+.right .item {
+    background: var(--color-white);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.7rem;
+    padding: 1.4rem var(--card-padding);
+    border-radius: var(--border-radius-3);
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+.right .item:hover {
+    box-shadow: none;
+}
+
+.right .item span {
+        background: rgb(170, 215, 252);
+        padding: 0.4rem;
+        border-radius: 50%;
+        color: var(--color-white);
+        font-size: 1.5rem;
+}
+
+.right .add-rotina {
+    background-color: transparent;
+    border: 2px dashed var(--color-primary);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right .add-rotina div {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/*---------------- botão liga-desliga-------------------- */
+.bt1 {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 20px 0;
+}
+
+input[type="checkbox"] {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    -webkit-appearance: none;
+    /* Aparência padrão do checkbox é anulada */
+    background-color: #c6c6c6;
+    /* cor de fundo */
+    outline: none;
+    /* sem borda externa */
+    border-radius: 20px;
+    /* arrendodamento dos cantos */
+    box-shadow: inset 0 0 5px rgba(85, 85, 85, 0.2);
+    /* sombra interna */
+    transition: .2s;
+    /* tempo de transição que vai ocorrer com a cor de fundo e com a posção da bolinha*/
+    cursor: pointer;
+    /* estabelecer que o mouse vai ter uma aparência como se fosse clicar em um botão */
+}
+
+input:checked[type="checkbox"] {
+    background-color: rgb(145, 245, 190);
+    /* cor de fundo que vai ser aplicada quando o checkbox tiver uma alteração para checked */
+}
+
+input[type="checkbox"]:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+    transform: scale(1.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: .2s;
+}
+
+input:checked[type="checkbox"]:before {
+    left: 20px;
+}
+
+/*------------- bolinhas coloridas pulsantes---------------- */
+.blobs-container {
+    display: flex;
+}
+.blob {
+    background: black;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+    margin: 6px;
+    height: 12px;
+    width: 12px;
+    transform: scale(1);
+    animation: pulse-black 2s infinite;
+    align-items: center;
+
+}
+
+.blob.red {
+    background: rgba(255, 82, 82, 1);
+    box-shadow: 0 0 0 0 rgba(255, 82, 82, 1);
+    animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(255, 82, 82, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+    }
+}
+
+/*----------------------------blob-------------------------------*/
